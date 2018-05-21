@@ -1,3 +1,44 @@
+class Logistics:
+    def __init__(self):
+        pass
+
+    def grahams(self, timeseries, amount):
+        days = 1
+        total = 0;
+        for tt in timeseries:
+            total = total + round(float(tt['4. close']), 2)
+            days = days + 1
+
+        eps = total / days
+        g = 5  # projected for 10 years
+
+        no_of_shares = amount / eps;
+
+        pr = eps * (8.5 + g) / 10
+
+        return pr * no_of_shares
+
+    def graph(self, data, total_history):
+        graph = {}
+        j = 0
+
+        for data_key in data.keys():
+
+            if (j > 10):
+                break
+
+            graph[data_key] = float(data[data_key]['4. close'])
+
+            if data_key in total_history:
+                total_history[data_key] += round(float(data[data_key]['4. close']), 2)
+            else:
+                total_history[data_key] = round(float(data[data_key]['4. close']), 2);
+
+            j += 1
+
+        return graph
+
+
 class Options:
     GROWTH_STOCK = ['NFLX', 'INTC', 'CSCO']
     INDEX_STOCK = ['DJIA', 'DJU', 'SPX']
