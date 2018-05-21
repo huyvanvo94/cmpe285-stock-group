@@ -17,4 +17,4 @@ flask run
 
 ```
 
-URL: 
+URL: https://cmpe285-stocks.herokuapp.com/
