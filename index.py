@@ -118,6 +118,6 @@ def listener():
 def index():
     return render_template('index.html')
 
-DEBUG = False
-if DEBUG: app.run(port=8080)
-else: app.run()
+
+app.run(port=8080)
+
