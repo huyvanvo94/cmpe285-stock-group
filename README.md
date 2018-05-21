@@ -6,12 +6,12 @@ Local Run:
 
 Mac
 
-export FLASK_APP=hello.py
+export FLASK_APP=app.py
 flask run
 
 Windows 
 
-set FLASK_APP=hello.py
+set FLASK_APP=app.py
 
 flask run
 
