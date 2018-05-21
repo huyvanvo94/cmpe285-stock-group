@@ -1,5 +1,8 @@
 ## Stocks Suggestion 
 
+Use: python-3.6.5
+
+
 Local Run:
 
 ``` 
